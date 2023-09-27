@@ -20,8 +20,7 @@ pipeline {
     stage('Prepare Dependencies') {
       steps {
              sh 'cp .env.sample .env'
-             sh 'composer update'
-             sh 'composer install'             
+             sh 'composer update'             
              sh 'php artisan setup'
              sh 'php artisan migrate --seed'
              sh 'npm install'
