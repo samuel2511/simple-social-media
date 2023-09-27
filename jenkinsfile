@@ -19,7 +19,7 @@ pipeline {
 
     stage('Prepare Dependencies') {
       steps {
-             sh 'cp .env.example .env'
+             sh 'cp .env.sample .env'
              sh 'composer install'             
              sh 'php artisan setup'
              sh 'php artisan migrate --seed'
