@@ -26,7 +26,6 @@ pipeline {
              sh 'npm install'
              sh 'php artisan storage:link'
              sh 'php artisan serve'
-             sh 'sudo apt install -y zip libapache2-mod-php phploc php-{xml,bcmath,bz2,intl,gd,mbstring,mysql,zip,curl}'
       }
     }
     
