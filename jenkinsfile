@@ -21,7 +21,7 @@ pipeline {
       steps {
              sh 'cp .env.sample .env'
              sh 'composer update'            
-             sh 'php artisan migrate --seed'
+             sh 'php artisan setup'
              sh 'npm install'
              sh 'php artisan storage:link'
              sh 'php artisan key:generate'
