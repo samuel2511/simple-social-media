@@ -24,7 +24,8 @@ pipeline {
              sh 'php artisan setup'
              sh 'npm install'
              sh 'php artisan storage:link'
-             sh 'php artisan serve'
+             sh 'php artisan db:seed'
+             sh 'php artisan key:generate'
       }
     }
     
